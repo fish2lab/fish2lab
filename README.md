@@ -1,13 +1,10 @@
 <div align="center">
   <img width="700" alt="fish²lab" src="./assets/fish2lab-readme-logo.png" />
   <p>
-    <a href="https://fish2lab.com">Website ↗</a>
-    &nbsp;·&nbsp;
-    <a href="mailto:fish2lab@gmail.com">Email ↗</a>
-    &nbsp;·&nbsp;
-    <a href="https://github.com/fish2lab">GitHub ↗</a>
-    &nbsp;·&nbsp;
-    <a href="https://x.com/Chypre271828">X ↗</a>
+    <a href="https://fish2lab.com"><img alt="Website" src="https://img.shields.io/badge/Website-4285F4?style=flat-square&amp;logo=googlechrome&amp;logoColor=white" /></a>
+    <a href="mailto:fish2lab@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-EA4335?style=flat-square&amp;logo=gmail&amp;logoColor=white" /></a>
+    <a href="https://github.com/fish2lab"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat-square&amp;logo=github&amp;logoColor=white" /></a>
+    <a href="https://x.com/Chypre271828"><img alt="X" src="https://img.shields.io/badge/X-000000?style=flat-square&amp;logo=x&amp;logoColor=white" /></a>
   </p>
 </div>
 
@@ -22,32 +19,6 @@ I'm a PhD student at Beijing Jiaotong University working across **LLM security, 
 ## Current research interest / 当前研究
 
 > **LLM security and agentic systems.** My current practice focuses on human-in-the-loop collaboration between people and agents: how agent systems acquire context, expose control boundaries and remain legible to the humans directing them.
-
-## Pinned projects / 置顶项目
-
-1. **[DSCodex](https://github.com/fish2lab/DSCodex)**<br>
-   Use DeepSeek V4 Flash inside the stock ChatGPT desktop app and Codex model picker while preserving the native Responses API tool loop and GPT OAuth workflow.<br>
-   <sub>JavaScript · Responses API · Codex</sub>
-
-2. **[SASH-ClothingHider](https://github.com/fish2lab/SASH-ClothingHider)**<br>
-   UE4SS Lua Mod for hiding character clothing in Shameimaru Aya's Silent Homeland.<br>
-   <sub>Lua · UE4SS</sub>
-
-3. **[tlm-codex-pet](https://github.com/fish2lab/tlm-codex-pet)**<br>
-   Render Touhou Little Maid Bedrock models as native Codex desktop pets.<br>
-   <sub>TypeScript · Codex Desktop</sub>
-
-4. **[MoonshotAI/kimi-code](https://github.com/MoonshotAI/kimi-code)**<br>
-   Kimi Code CLI — The Starting Point for Next-Gen Agents.<br>
-   <sub>TypeScript · Agent CLI</sub>
-
-5. **[HFDLYS/BJTUselfService](https://github.com/HFDLYS/BJTUselfService)**<br>
-   交大自由行，掌上校园信息中心。<br>
-   <sub>Kotlin · Android</sub>
-
-6. **[typex-ink/Typex](https://github.com/typex-ink/Typex)**<br>
-   Speak. It types. Typex is an open-source desktop AI voice input tool.<br>
-   <sub>Rust · Desktop</sub>
 
 ## 🧭 Collections / 内容入口
 
