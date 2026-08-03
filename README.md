@@ -12,9 +12,9 @@
 
 ## Silas Su · 苏心贤
 
-I'm a PhD student at Beijing Jiaotong University working across **LLM security, agentic systems and cognitive science**. I also photograph, study mathematics and write about the systems that shape learning and everyday life.
+I'm a PhD student at Beijing Jiaotong University working across **LLM security, agentic systems and cognitive science**. I also like medium-format photograph, study mathematics and write about the systems that shape learning and everyday life.
 
-我是北京交通大学博士生，研究 LLM security、agentic systems 与认知科学；同时持续摄影、学习数学，并记录技术、学习与日常生活中的系统性问题。
+我是北京交通大学博士生，研究 LLM security、agentic systems 与认知科学；我也喜欢中画幅摄影、学习数学，并记录技术、学习与日常生活中的系统性问题。
 
 ## Current research interest / 当前研究
 
