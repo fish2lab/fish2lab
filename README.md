@@ -21,11 +21,11 @@ PhD student at Beijing Jiaotong University, working on **LLM security and agent 
 <table>
   <tr>
     <td width="130" valign="top"><strong>🔬 Researching</strong></td>
-    <td>Provenance inside the context window. A model decides whom to trust with two systems: role tokens it cannot forge but that only split <em>mine</em> from <em>theirs</em>, and text shapes it learned from harnesses in post‑training, fine‑grained but forgeable by anyone. Prompt injection lives in the gap between them. Probing this on open weights of <a href="https://api-docs.deepseek.com/">DeepSeek V4.1 Flash</a>: does a role header change what the model reads, and is a successful injection always one that got selected?<br><sub>上下文里的来源问题：模型靠伪造不了但只分两边的角色 token，和后训练学来、分得细却人人可写的文本长相来「认人」，提示注入就住在两者的缝里。</sub></td>
+    <td>Provenance inside the context window. A model decides whom to trust with two systems: role tokens it cannot forge but that only split <em>mine</em> from <em>theirs</em>, and text shapes it learned from harnesses in post‑training, fine‑grained but forgeable by anyone. Prompt injection lives in the gap between them. Probing this on open weights of <a href="https://api-docs.deepseek.com/">DeepSeek V4.1 Flash</a>: does a role header change what the model reads, and is a successful injection always one that got selected?</td>
   </tr>
   <tr>
     <td valign="top"><strong>✍️ Writing</strong></td>
-    <td>A position paper arguing the agent harness does not disappear under scaling, it shrinks to a kernel: four operations on context structure (<code>execute</code>, <code>cut</code>, <code>fork</code>, <code>partition</code>) and not one line of prompt. Everything a harness does by <em>saying</em> gets absorbed into the weights; what it does by <em>placing</em> cannot be.<br><sub>立场论文：harness 不会消失，它收敛成一个只有四个上下文操作、没有一句提示词的内核。</sub></td>
+    <td>A position paper arguing the agent harness does not disappear under scaling, it shrinks to a kernel: four operations on context structure (<code>execute</code>, <code>cut</code>, <code>fork</code>, <code>partition</code>) and not one line of prompt. Everything a harness does by <em>saying</em> gets absorbed into the weights; what it does by <em>placing</em> cannot be.</td>
   </tr>
   <tr>
     <td valign="top"><strong>🚢 Shipping</strong></td>
@@ -49,9 +49,10 @@ PhD student at Beijing Jiaotong University, working on **LLM security and agent 
       <sub>在原版 Codex / ChatGPT 桌面端同时使用 DeepSeek 与 GPT。<code>JavaScript · MIT</code></sub>
     </td>
     <td width="50%" valign="top">
-      <strong><a href="https://github.com/fish2lab/fish2lab-site">fish2lab-site</a></strong><br>
-      One Next.js / OpenNext build serving the home page, photography portfolio, research notes and blog from a single Cloudflare Worker, with host rewrites for the three subdomains.<br>
-      <sub>一个构建、一个 Worker、四个站点。<code>TypeScript</code></sub>
+      <strong><a href="https://github.com/l0ng-ai/tty7">tty7</a></strong>
+      &nbsp;<a href="https://github.com/l0ng-ai/tty7/pull/880"><img alt="PR #880 merged" src="https://img.shields.io/badge/PR_%23880-merged-8250DF?style=flat-square&logo=github&logoColor=white" /></a><br>
+      A pure‑Rust terminal workbench on Zed's gpui with persistent sessions and coding‑agent awareness. My contribution answers the macOS Dock's reopen event, so a tty7 whose last window was closed comes back instead of staying retired.<br>
+      <sub>给 tty7 补上 macOS Dock 重新打开窗口的行为。<code>Rust</code></sub>
     </td>
   </tr>
   <tr>
@@ -66,22 +67,9 @@ PhD student at Beijing Jiaotong University, working on **LLM security and agent 
       <sub>名画与东方 Project 的邂逅。<code>TypeScript · Docusaurus</code></sub>
     </td>
   </tr>
-  <tr>
-    <td valign="top">
-      <strong><a href="https://github.com/fish2lab/ArcanAgent">ArcanAgent</a></strong>
-      &nbsp;<a href="https://github.com/fish2lab/ArcanAgent/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/fish2lab/ArcanAgent?style=flat-square&label=&color=F5A623" /></a><br>
-      A learning‑science agent whose memory is a bidirectionally linked markdown vault, with context assembled from the link graph.<br>
-      <sub>双向链接知识库与自动上下文构建的学习科学 agent。<code>Python</code></sub>
-    </td>
-    <td valign="top">
-      <strong><a href="https://github.com/fish2lab/PaperSRS">PaperSRS</a></strong><br>
-      Paper reading that ends in flashcards and spaced repetition instead of a folder of PDFs.<br>
-      <sub>把论文读成卡片，按间隔重复复习。</sub>
-    </td>
-  </tr>
 </table>
 
-**Upstream** · [l0ng-ai/tty7 #880](https://github.com/l0ng-ai/tty7/pull/880) answers the macOS Dock's reopen event so a closed tty7 can come back · [typex-ink/Typex #2](https://github.com/typex-ink/Typex/pull/2) adds Xiaomi MiMo ASR and explicit hotkey trigger modes.
+**Upstream** · [typex-ink/Typex #2](https://github.com/typex-ink/Typex/pull/2) adds Xiaomi MiMo ASR and explicit hotkey trigger modes.
 
 ## Where things live · 内容入口
 
