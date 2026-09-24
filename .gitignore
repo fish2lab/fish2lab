@@ -1,0 +1,4 @@
+tools/.venv/
+tools/fonts/*.ttf
+.DS_Store
+/dist/
