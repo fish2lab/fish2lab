@@ -12,7 +12,7 @@ Type and colour follow [fish2lab.com](https://fish2lab.com): Gelasio for the wor
 
 ## How it is built
 
-An SVG shown through `<img>` cannot load web fonts, so every letter is an outline. `tools/build_assets.py` shapes the fixed strings with HarfBuzz and pulls glyph outlines out of the fonts with fontTools, sorts the logo's colours into the classes that make the whale's tone map, traces the fish and its spout with potrace, and writes all of it into `assets.json`. The nightly run needs nothing but Node: it reads that file, asks the GraphQL API for the calendar, and writes the two SVGs. Line breaks, wave phases and ring gaps come from a fixed seed, so the water only changes where the data does.
+An SVG shown through `<img>` cannot load web fonts, so every letter is an outline. `tools/build_assets.py` shapes the fixed strings with HarfBuzz and pulls glyph outlines out of the fonts with fontTools, sorts the logo's colours into the classes that make the whale's tone map, traces the fish and its spout with potrace, and writes all of it into `assets.json`. The nightly run needs nothing but Node: it reads that file, asks the GraphQL API for the calendar, and writes the two SVGs. Line breaks, wave phases and ring gaps come from a fixed seed, so the water only changes where the data does. GitHub splits the calendar into days in the time zone of whoever asks: the workflow's own token gets UTC, so a pull request opened at 00:18 in Beijing lands on the previous day. If the repository has a `CAL_TOKEN` secret (a fine-grained token of the profile owner with public read-only access and no permissions), the workflow uses it instead and the ripples line up with the calendar the owner sees.
 
 ```sh
 # redraw with your own token
