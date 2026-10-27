@@ -1,22 +1,19 @@
 # The header picture
 
-`render.mjs` draws the picture at the top of [github.com/fish2lab](https://github.com/fish2lab) from the last year of GitHub contributions. The [`art` workflow](../.github/workflows/art.yml) runs it every night and force-pushes `stream.svg` and `stream-dark.svg` to the [`output`](https://github.com/fish2lab/fish2lab/tree/output) branch, which the profile README reads through a `<picture>` element so GitHub picks the version that matches your theme. The pipeline is the one [Platane/snk](https://github.com/Platane/snk) uses for its contribution snake.
+`render.mjs` draws the picture at the top of [github.com/fish2lab](https://github.com/fish2lab). It writes `header.svg` and `header-dark.svg` into this folder, and the profile README picks one through a `<picture>` element so GitHub shows the version that matches your theme. Nothing redraws it on a schedule; run the script again after changing the layout or the assets.
 
 ## What is in it
 
-The picture is one engraved stream of 42 lines, spaced wider towards the viewer. Each day with contributions drops a ripple on it, placed the way the contribution calendar further down the profile places its squares: weeks run left to right, Sunday is the far row and Saturday the near one, and a busier day gets more rings, using GitHub's own four quartiles. The fisherman's line hangs over today, where a red float bobs and rings keep spreading; the animation stops if your system asks for reduced motion.
+On the left is the fish²lab wordmark with the current research line under it. On the right is a school of fish on a logarithmic spiral. Every fish is the fish from the fish²lab logo, scaled to 0.88 of the one before it and placed one fixed step further along the curve, so the school gets smaller and smaller until it reaches a red point at the centre. fish², fish³ and so on is the joke in the name. Read as a diagram, it is a self-improving loop: each round is built from the last one, and the question is whether it converges on the point you meant it to. In dark mode the ink becomes pale on black.
 
-The whale and the fish come from the fish²lab logo. Under the water the whale exists only as the weight of the water lines. Each line swells where the logo's body is dark, thins over the pale belly and lip stripe, and breaks for the eye and for a narrow halo around the body, which is how a banknote engraver builds a portrait out of parallel lines. Above the water everything is a solid ink cut with white details: the fish riding its spout, the boat, the straw hat and cape. In dark mode the ink turns into white scratches on black, the scratchboard look of the [booth film](https://github.com/fish2lab/bjtu-touhou-booth).
-
-Type and colour follow [fish2lab.com](https://fish2lab.com): Gelasio for the wordmark and the subline, spaced Ubuntu Mono capitals for labels, one red (`#b71c1c`) for the kicker, the ² and the seal, on the site's warm paper (`#faf8f4`). The two columns on the right are Li Bai's 闲来垂钓碧溪上，忽复乘舟梦日边, the line in the profile bio.
+Type and colour follow [fish2lab.com](https://fish2lab.com): Gelasio for the wordmark and the subline, spaced Ubuntu Mono capitals for labels, one red (`#b71c1c`) for the kicker, the ² and the centre point, on the site's warm paper (`#faf8f4`).
 
 ## How it is built
 
-An SVG shown through `<img>` cannot load web fonts, so every letter is an outline. `tools/build_assets.py` shapes the fixed strings with HarfBuzz and pulls glyph outlines out of the fonts with fontTools, sorts the logo's colours into the classes that make the whale's tone map, traces the fish and its spout with potrace, and writes all of it into `assets.json`. The nightly run needs nothing but Node: it reads that file, asks the GraphQL API for the calendar, and writes the two SVGs. Line breaks, wave phases and ring gaps come from a fixed seed, so the water only changes where the data does. GitHub splits the calendar into days in the time zone of whoever asks: the workflow's own token gets UTC, so a pull request opened at 00:18 in Beijing lands on the previous day. If the repository has a `CAL_TOKEN` secret (a fine-grained token of the profile owner with public read-only access and no permissions), the workflow uses it instead and the ripples line up with the calendar the owner sees.
+An SVG shown through `<img>` cannot load web fonts, so every letter is an outline. `tools/build_assets.py` shapes the fixed strings with HarfBuzz, pulls glyph outlines out of the fonts with fontTools, traces the fish from the logo with potrace, and writes everything into `assets.json`. `render.mjs` needs only Node: it reads that file and writes the two SVGs, with the fish defined once and reused through `<use>`.
 
 ```sh
-# redraw with your own token
-GITHUB_TOKEN=$(gh auth token) node art/render.mjs dist
+node art/render.mjs
 
 # rebuild assets.json after changing a fixed string, a font or the logo
 brew install potrace
@@ -29,4 +26,4 @@ The fonts are not in the repository. Put `Gelasio[wght].ttf`, `Gelasio-Italic[wg
 
 ## 中文说明
 
-页首这张图每晚由 GitHub Actions 按过去一年的贡献日历重画。一条刻线的溪流，有贡献的日子在水面落一圈涟漪，位置和主页下方的贡献格子一一对应：周从左到右，周日在远处，周六在近处，越忙的日子圈越多。渔翁的钓线垂在今天那一格上。水下的鲸鱼只靠水面线条的粗细显形，水面以上的鱼、水柱、小舟和斗笠是实心墨块加白线刻出的细节，暗色模式下整张图变成黑底白线的刮画。字体和配色照搬 fish2lab.com。
+页首图左边是 fish²lab 字标和当前研究方向，右边是一群沿对数螺线游向中心的鱼。每条鱼都取自 fish²lab 标志，比前一条缩小到 0.88 倍、沿曲线前进固定一步，一直缩到中心的红点。fish²、fish³ 是名字里的玩笑；当图看，它就是一个自我改进的循环：每一轮都从上一轮造出来，要问的是它最后收敛到的是不是你想要的那个点。图是静态的，改布局或素材后手动重跑 `render.mjs`。字体和配色照搬 fish2lab.com。

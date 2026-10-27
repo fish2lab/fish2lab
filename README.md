@@ -1,16 +1,16 @@
 <p>
 <a href="https://github.com/fish2lab/fish2lab/tree/main/art">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fish2lab/fish2lab/output/stream-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/fish2lab/fish2lab/output/stream.svg" />
-    <img width="100%" alt="fish²lab. An engraved stream: each day with GitHub contributions in the last year is a ripple, laid out like the contribution calendar. The whale from the fish²lab logo is drawn only by the weight of the water lines; the fish leaps from its spout. A fisherman at the right end holds his line over today." src="https://raw.githubusercontent.com/fish2lab/fish2lab/output/stream.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="art/header-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="art/header.svg" />
+    <img width="100%" alt="fish²lab. Silas Su, Beijing. Recursive self-improvement and agent security. A school of fish on a spiral, each one a smaller copy of the last, converging on a red point." src="art/header.svg" />
   </picture>
 </a>
 </p>
 
-PhD student at Beijing Jiaotong University, working on **LLM agent security at the harness layer**: where the security boundary belongs once an agent holds real logins, runs code and remembers things, and how a harness that rewrites itself stays inside that boundary. I also shoot medium-format film, study mathematics, and write about the systems that shape learning and everyday life.
+PhD student at Beijing Jiaotong University. My research is turning to **recursive self-improvement**: models are now strong enough to improve themselves at the harness layer, and I want to know what that loop does next and how it stays trustworthy. I came to it from LLM agent security and keep working on both. I also shoot medium-format film, study mathematics, and write about the systems that shape learning and everyday life.
 
-北京交通大学博士生，做 **agent harness 层的 LLM 安全**：agent 拿着真实登录态、能执行代码、会写记忆之后，安全边界该放在哪里；会自我改写的 harness 怎样不越过这条边界。也拍中画幅胶片、学数学，记录技术、学习与日常生活里的系统性问题。
+北京交通大学博士生，研究重心正转向**递归自我改进（RSI）**：模型已经强到能在 harness 层改进自己，我想知道这个循环的下一步是什么、怎样保持可信。我从 LLM agent 安全走过来，两边都还在做。也拍中画幅胶片、学数学，记录技术、学习与日常生活里的系统性问题。
 
 [fish2lab.com](https://fish2lab.com) · [x.com/fish2lab](https://x.com/fish2lab) · [fish2lab@gmail.com](mailto:fish2lab@gmail.com)
 
@@ -19,27 +19,23 @@ PhD student at Beijing Jiaotong University, working on **LLM agent security at t
 <table>
   <tr>
     <td width="110" valign="top"><sub><b>RESEARCHING</b></sub></td>
-    <td>The harness as a reference monitor. Indirect prompt injection gets a larger blast radius every time an agent inherits a real browser session or installs a third‑party Skill or MCP server, and the model cannot be trusted to refuse. So the boundary goes outside the model: a harness that mediates every action, that the model cannot tamper with, and whose policy can be checked, with credentials kept out of it entirely. Two places this gets hard: Code Mode and general executors move permission from the granularity of a tool to the granularity of an execution, where sandboxes, network allowlists and information‑flow tracking have to take over; and stateful agents need control over what they <em>write</em> to memory as well as what they say. A passphrase echo before an irreversible action catches context drift but stops no adversary.</td>
+    <td>Recursive self-improvement. Models are now strong enough that the intuitive old tricks of deep learning (regularization, off-policy experience, held-out evals) can be applied at the harness layer to make them better. If RSI is retracing the path of deep learning and LLMs, what is the next step, and the one after that? For example, how does an editable verifier stay trustworthy? I want problems whose value doesn’t shrink as models get stronger.</td>
   </tr>
   <tr>
-    <td valign="top"><sub><b>SELF‑IMPROVING</b></sub></td>
-    <td>Harnesses that improve themselves, with constraints. How a self‑made change is accepted or rolled back without overfitting to the benchmark it was scored on; why an agent may accumulate facts on its own while new behaviour rules can only be proposed for a human to review; and retrodiction, predicting outcomes that are already known from earlier state, as the training signal for the loop.</td>
+    <td valign="top"><sub><b>LEARNING</b></sub></td>
+    <td>Learning with agents. Honestly, with agents this capable I’ve mostly used them for low-ROI, high-joy things like Three.js and art-ish projects. Meanwhile I skipped something a 4o-level model could already do well: guiding my own learning. Fixing that.</td>
   </tr>
   <tr>
-    <td valign="top"><sub><b>INSIDE THE MODEL</b></sub></td>
-    <td>Refusal robustness at the representation level: refusal directions and SAE features as detectors in multi‑turn and agent settings; whether a semantics‑preserving position shift under compressed attention is enough to slip past refusal; and latent or KV‑cache channels between agents that leave token‑level audits and chain‑of‑thought monitoring with nothing to read.</td>
+    <td valign="top"><sub><b>WONDERING</b></sub></td>
+    <td>Personal agents vs. the human as a chaotic system. Today’s personal agents do things for you. They don’t yet guide meta-actions, teach you to do the right thing, make it easier, and grow your metacognition and motivation along the way. Some things, especially the body and health, can only be learned by doing. Why has no agent tackled “life” as a high-level problem yet?</td>
   </tr>
   <tr>
-    <td valign="top"><sub><b>WRITING</b></sub></td>
-    <td>A position paper arguing the agent harness does not disappear under scaling, it shrinks to a kernel: four operations on context structure (<code>execute</code>, <code>cut</code>, <code>fork</code>, <code>partition</code>) and not one line of prompt. Everything a harness does by <em>saying</em> gets absorbed into the weights; what it does by <em>placing</em> cannot be.</td>
+    <td valign="top"><sub><b>STUDYING</b></sub></td>
+    <td>Learning what stays useful after AGI. I’m working on CS and security fundamentals, mainly so I can tell when a plausible-looking answer is wrong.</td>
   </tr>
   <tr>
-    <td valign="top"><sub><b>SHIPPING</b></sub></td>
-    <td><a href="https://github.com/fish2lab/touhou-code-video-template">touhou-code-video-template</a>, the engine behind the Patchouli Lecture series pulled out as a template: a voiced Touhou explainer in pure Canvas 2D, six episodes so far (<a href="https://github.com/fish2lab/patchouli-lecture-5">optogenetics and mental health</a>, <a href="https://github.com/fish2lab/patchouli-lecture-6">cooking as engineering</a>). <a href="https://github.com/fish2lab/os-lab-mcp">os-lab-mcp</a>, a lab for the undergraduate OS interfaces course where students watch an agent reach the file system through MCP and write the sandbox rule that stops it. <a href="https://github.com/fish2lab/DSCodex">DSCodex</a> v1.4.0.</td>
-  </tr>
-  <tr>
-    <td valign="top"><sub><b>ELSEWHERE</b></sub></td>
-    <td>Film scans going up at <a href="https://portfolio.fish2lab.com">portfolio.fish2lab.com</a>; a Touhou fan‑game side project about a perishable flow and four storable stocks.</td>
+    <td valign="top"><sub><b>ENJOYING</b></sub></td>
+    <td>Art in all its forms.</td>
   </tr>
 </table>
 
@@ -106,4 +102,4 @@ PhD student at Beijing Jiaotong University, working on **LLM agent security at t
   </tr>
 </table>
 
-<sub>The header is redrawn every night from the contribution calendar by <a href="https://github.com/fish2lab/fish2lab/blob/main/art/render.mjs"><code>art/render.mjs</code></a>: one ripple per active day, weeks left to right, Sunday on the far row. <a href="https://github.com/fish2lab/fish2lab/tree/main/art">How it is drawn →</a></sub>
+<sub>The header is a school of fish on a logarithmic spiral, each one the last scaled by 0.88, drawn once by <a href="https://github.com/fish2lab/fish2lab/blob/main/art/render.mjs"><code>art/render.mjs</code></a>. <a href="https://github.com/fish2lab/fish2lab/tree/main/art">How it is drawn →</a></sub>

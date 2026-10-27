@@ -41,7 +41,7 @@ SERIF = {
     "wordmark_lab": "lab",
 }
 SERIF_ITALIC = {
-    "subline": "LLM security & agent harnesses",
+    "subline": "Recursive self-improvement & agent security",
 }
 POEM = ["闲来垂钓碧溪上", "忽复乘舟梦日边"]
 SEAL = "苏"
