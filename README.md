@@ -2,13 +2,12 @@
 
 <h3>hi, i'm Silas 👋</h3>
 
-<p><sub>🎓 PhD @ BJTU · Beijing · RSI / Agent Security</sub></p>
+<p><sub>🎓 Security PhD @ BJTU · Beijing · RSI / Agent Security</sub></p>
 
 <p>
-  研究递归自我改进（RSI）与 LLM agent 安全，<br>
-  平时也写点顺手的 agent 工具和有意思的小项目。<br>
-  不写代码的时候拍拍中画幅胶片、学点数学，<br>
-  或者看点艺术，琢磨日常生活里的系统。
+  研究递归自我改进（RSI）与 agent 安全，<br>
+  纯代码Touhou视频， agent 插件和小玩具。<br>
+  中画幅摄影，GFX100s & GF45 <br>
 </p>
 
 <p>
